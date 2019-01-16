@@ -37,33 +37,4 @@ extension UIViewController {
   }
 }
 
-// swiftlint:disable file_length
-// swiftlint:disable type_body_length
-
-struct Storyboard {
-  enum LaunchScreen: StoryboardSceneType {
-    static let storyboardName = "LaunchScreen"
-  }
-  enum Main: String, StoryboardSceneType {
-    static let storyboardName = "Main"
-
-    static func initialViewController() -> UINavigationController {
-      guard let vc = storyboard().instantiateInitialViewController() as? UINavigationController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
-
-    case charactersViewControllerScene = "CharactersViewController"
-    static func instantiateCharactersViewController() -> CharactersViewController {
-      guard let vc = Storyboard.Main.charactersViewControllerScene.viewController() as? CharactersViewController
-      else {
-        fatalError("ViewController 'CharactersViewController' is not of the expected class CharactersViewController.")
-      }
-      return vc
-    }
-  }
-}
-
-struct StoryboardSegue {
-}
+// No storyboard found

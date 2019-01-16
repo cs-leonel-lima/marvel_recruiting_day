@@ -13,13 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ApperanceProxyHelper.customizeNavigationBar()
+        self.setupWindow()
         return true
     }
 
-
 }
 
+extension AppDelegate {
+    func setupWindow() {
+        self.window = UIWindow()
+        self.window?.makeKeyAndVisible()
+        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+    }
+}
