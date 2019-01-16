@@ -10,7 +10,7 @@ import UIKit
 
 final class MainViewControllerScreen: UIView {
     let charactersTableView: CharactersTable = {
-        let table = CharactersTable()
+        let table = CharactersTable(frame: .zero, style: .grouped)
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
