@@ -23,6 +23,12 @@ final class MainViewControllerScreen: UIView {
         return searchBar
     }()
     
+    let charactersCollectionView: UICollectionView = {
+        let collectionView = UICollectionView()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    
     init(){
         super.init(frame: .zero)
         setupView()
@@ -39,6 +45,7 @@ extension MainViewControllerScreen: CodeView {
     func buildViewHierarchy() {
         self.addSubview(self.searchBar)
         self.addSubview(self.charactersTableView)
+        self.addSubview(self.charactersCollectionView)
     }
     
     func setupConstraints() {
@@ -54,6 +61,14 @@ extension MainViewControllerScreen: CodeView {
             self.charactersTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.charactersTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             ])
+        
+        NSLayoutConstraint.activate([
+            self.charactersCollectionView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.charactersCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.charactersCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.charactersCollectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+            ])
+        
     }
     
     func setupAdditionalConfiguration() {

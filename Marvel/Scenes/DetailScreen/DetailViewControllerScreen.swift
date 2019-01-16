@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class DetailViewControllerScreen: UIView {
+final class DetailViewControllerScreen: UIView {
     
     let characterImageView: UIImageView = {
         let view = UIImageView(frame: .zero)

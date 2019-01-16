@@ -22,4 +22,7 @@ extension CodeView {
         setupConstraints()
         setupAdditionalConfiguration()
     }
+    
+    func setupAdditionalConfiguration() {}
+    
 }

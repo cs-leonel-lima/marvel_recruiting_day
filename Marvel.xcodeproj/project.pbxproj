@@ -27,6 +27,9 @@
 		99FC2BCF1DDDB966006CB7EE /* ThumbImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FC2BCE1DDDB966006CB7EE /* ThumbImage.swift */; };
 		EF10AEFD21EF89AA005E8BB7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AEFC21EF89AA005E8BB7 /* DetailViewController.swift */; };
 		EF10AEFF21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AEFE21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift */; };
+		EF10AF0221EFACF0005E8BB7 /* CharacterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AF0121EFACF0005E8BB7 /* CharacterCollectionCell.swift */; };
+		EF10AF0421EFB4A1005E8BB7 /* CharacterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */; };
+		EF10AF0621EFBEAF005E8BB7 /* CharactersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		E54675F9B824A595E2F0D533 /* Pods-MarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelTests/Pods-MarvelTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF10AEFC21EF89AA005E8BB7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EF10AEFE21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
+		EF10AF0121EFACF0005E8BB7 /* CharacterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionCell.swift; sourceTree = "<group>"; };
+		EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGridView.swift; sourceTree = "<group>"; };
+		EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8FC17EFD21EF95F000859E28 /* CharacterTableCell.swift */,
+				EF10AF0121EFACF0005E8BB7 /* CharacterCollectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				8FC17F0021EF993C00859E28 /* CharacterRowView.swift */,
+				EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */,
+				EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 			files = (
 				EF10AEFD21EF89AA005E8BB7 /* DetailViewController.swift in Sources */,
 				9922F15A1DFDC00900237BFE /* ApperanceProxyHelper.swift in Sources */,
+				EF10AF0221EFACF0005E8BB7 /* CharacterCollectionCell.swift in Sources */,
 				EF10AEFF21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift in Sources */,
 				99D0DEBA1DE268D000FE34D7 /* UIImageView+Kingfisher.swift in Sources */,
 				0AA652681F8D969000630AA4 /* CharactersResponse.swift in Sources */,
@@ -389,6 +399,8 @@
 				8F59614B21EF804900B0B287 /* MainViewControllerswift.swift in Sources */,
 				99E1DFE41DDA1F4C006F9D96 /* AppDelegate.swift in Sources */,
 				9939CFCF1DDA2E07008CE399 /* MarvelAPI.swift in Sources */,
+				EF10AF0421EFB4A1005E8BB7 /* CharacterGridView.swift in Sources */,
+				EF10AF0621EFBEAF005E8BB7 /* CharactersCollectionView.swift in Sources */,
 				8FC17F0121EF993C00859E28 /* CharacterRowView.swift in Sources */,
 				8FC17EF721EF93B700859E28 /* CharacterSelectionDelegate.swift in Sources */,
 				99FC2BCF1DDDB966006CB7EE /* ThumbImage.swift in Sources */,
