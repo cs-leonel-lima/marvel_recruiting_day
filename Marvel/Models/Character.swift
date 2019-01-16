@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct Character: Codable {
     var id: Int
     var name: String
     var bio: String
     var thumbImage: ThumbImage?
+    var image: UIImage?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -35,5 +37,12 @@ struct Character: Codable {
         name = try values.decode(String.self, forKey: .name)
         bio = try values.decode(String.self, forKey: .bio)
         thumbImage = try values.decode(Optional<ThumbImage>.self, forKey: .thumbImage)
+    }
+    
+    init(name: String, bio: String, id: Int, mockImage: UIImage) {
+        self.name = name
+        self.bio = bio
+        self.id = id
+        self.image = mockImage
     }
 }
