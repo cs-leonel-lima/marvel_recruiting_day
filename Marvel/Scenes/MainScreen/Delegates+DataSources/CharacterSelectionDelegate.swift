@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CharactersSelectionDelegate: class {
-    func didSelect(character: Character)
+    func didSelect(character at: IndexPath)
 }

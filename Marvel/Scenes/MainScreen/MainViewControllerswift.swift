@@ -34,5 +34,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         self.title = "Characters"
+        self.setupTableView(with: self.characters)
+    }
+}
+
+extension MainViewController {
+    func setupTableView(with characters: [Character]){
+        screen.charactersTableView.updateItems(characters)
     }
 }

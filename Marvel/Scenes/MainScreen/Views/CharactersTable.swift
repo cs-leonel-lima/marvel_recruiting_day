@@ -12,14 +12,15 @@ final class CharactersTable: UITableView {
     
     var didSelectCharacter: ((Character) -> ())?
     
-    var items: [Character] = []
     
-    var customDataSource: CharacterTableViewDataSource?
-    var customDelegate: CharacterTableViewDelegate?
+    fileprivate var customDataSource: CharacterTableViewDataSource?
+    lazy fileprivate var customDelegate: CharacterTableViewDelegate = CharacterTableViewDelegate(self)
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         self.backgroundColor = ColorPalette.black
+        
+        self.customDataSource = CharacterTableViewDataSource(items: [], tableView: self, delegate: self.customDelegate)
 //        self.customDelegate = CharacterTableViewDelegate(items: items, delegate: self) -> Averiguar essa linha, provavelmente vou precisar de um metodo setup para configurar o datasource e o delegate.
     }
     
@@ -31,16 +32,12 @@ final class CharactersTable: UITableView {
 
 extension CharactersTable {
     func updateItems(_ items: [Character]) {
-        customDataSource?.update(with: items, handler: {
-            reloadData()
-        })
+        customDataSource?.updateItems(items)
     }
 }
 
 extension CharactersTable: CharactersSelectionDelegate {
-    func didSelect(character: Character) {
-        if let handler = self.didSelectCharacter {
-            handler(character)
-        }
+    func didSelect(character at: IndexPath) {
+        
     }
 }

@@ -10,17 +10,17 @@ import UIKit
 
 final class CharacterTableViewDelegate: NSObject, UITableViewDelegate {
     
-    weak var characterSelectionDelegate: CharactersSelectionDelegate?
+    let delegate: CharactersSelectionDelegate
     
-    let items: [Character]
+    init(_ delegate: CharactersSelectionDelegate) {
+        self.delegate = delegate
+    }
     
-    init(items: [Character], delegate: CharactersSelectionDelegate) {
-        self.items = items
-        self.characterSelectionDelegate = delegate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CharacterTableCell.height()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let character = items[indexPath.item]
-        self.characterSelectionDelegate?.didSelect(character: character)
+        delegate.didSelect(character: indexPath)
     }
 }
