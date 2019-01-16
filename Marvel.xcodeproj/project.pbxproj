@@ -83,6 +83,9 @@
 		8F59614621EF7F3300B0B287 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8FC17EFF21EF992D00859E28 /* Views */,
+				8FC17EFC21EF95BC00859E28 /* Cells */,
+				8FC17EF521EF938400859E28 /* Delegates+DataSources */,
 				8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */,
 				8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */,
 			);
@@ -220,9 +223,6 @@
 		EF10AF0021EF8CC6005E8BB7 /* DetailScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8FC17EFF21EF992D00859E28 /* Views */,
-				8FC17EFC21EF95BC00859E28 /* Cells */,
-				8FC17EF521EF938400859E28 /* Delegates+DataSources */,
 				EF10AEFC21EF89AA005E8BB7 /* DetailViewController.swift */,
 				EF10AEFE21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift */,
 			);
