@@ -26,6 +26,9 @@ extension AppDelegate {
     func setupWindow() {
         self.window = UIWindow()
         self.window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        let navController = UINavigationController(rootViewController: MainViewController())
+        navController.navigationBar.isTranslucent = false
+        navController.navigationBar.barTintColor = ColorPalette.red
+        window?.rootViewController = navController
     }
 }

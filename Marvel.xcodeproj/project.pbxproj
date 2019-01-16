@@ -11,6 +11,7 @@
 		577769109DC3FB06E7D1882F /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7213E1EA596B7C60C8E59 /* Pods_Marvel.framework */; };
 		8F59614921EF802700B0B287 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614821EF802700B0B287 /* CodeViewProtocol.swift */; };
 		8F59614B21EF804900B0B287 /* MainViewControllerswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */; };
+		8F59614D21EF8B8A00B0B287 /* MainViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */; };
 		9922F1571DFDB69200237BFE /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922F1561DFDB69200237BFE /* ColorPalette.swift */; };
 		9922F15A1DFDC00900237BFE /* ApperanceProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922F1591DFDC00900237BFE /* ApperanceProxyHelper.swift */; };
 		9939CFCF1DDA2E07008CE399 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939CFCE1DDA2E07008CE399 /* MarvelAPI.swift */; };
@@ -28,6 +29,7 @@
 		8C6A61295B862198BB138719 /* Pods_MarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F59614821EF802700B0B287 /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
 		8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerswift.swift; sourceTree = "<group>"; };
+		8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerScreen.swift; sourceTree = "<group>"; };
 		9922F1561DFDB69200237BFE /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9922F1591DFDC00900237BFE /* ApperanceProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApperanceProxyHelper.swift; sourceTree = "<group>"; };
 		9939CFCE1DDA2E07008CE399 /* MarvelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */,
+				8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				9922F15A1DFDC00900237BFE /* ApperanceProxyHelper.swift in Sources */,
 				99D0DEBA1DE268D000FE34D7 /* UIImageView+Kingfisher.swift in Sources */,
 				0AA652681F8D969000630AA4 /* CharactersResponse.swift in Sources */,
+				8F59614D21EF8B8A00B0B287 /* MainViewControllerScreen.swift in Sources */,
 				9939CFD41DDA333D008CE399 /* Character.swift in Sources */,
 				8F59614921EF802700B0B287 /* CodeViewProtocol.swift in Sources */,
 				9922F1571DFDB69200237BFE /* ColorPalette.swift in Sources */,
@@ -434,6 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 83C3V38WSB;
 				INFOPLIST_FILE = Marvel/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpioy.marvelapp.Marvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,6 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 83C3V38WSB;
 				INFOPLIST_FILE = Marvel/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpioy.marvelapp.Marvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,12 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    
-    private let charactersTableView: UITableView = {
-        let table = UITableView()
-        
-        return table
-    }()
+    let screen = MainViewControllerScreen()
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -30,9 +25,11 @@ class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        self.view = screen
+    }
+    
     override func viewDidLoad() {
-        
+        self.title = "Characters"
     }
 }
-
-
