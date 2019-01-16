@@ -17,6 +17,7 @@
 		8FC17EFB21EF959300859E28 /* CharacterTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC17EFA21EF959300859E28 /* CharacterTableViewDataSource.swift */; };
 		8FC17EFE21EF95F000859E28 /* CharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC17EFD21EF95F000859E28 /* CharacterTableCell.swift */; };
 		8FC17F0121EF993C00859E28 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC17F0021EF993C00859E28 /* CharacterRowView.swift */; };
+		8FE7CF5621EFAD870067977E /* CharactersTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7CF5521EFAD870067977E /* CharactersTable.swift */; };
 		9922F1571DFDB69200237BFE /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922F1561DFDB69200237BFE /* ColorPalette.swift */; };
 		9922F15A1DFDC00900237BFE /* ApperanceProxyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922F1591DFDC00900237BFE /* ApperanceProxyHelper.swift */; };
 		9939CFCF1DDA2E07008CE399 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939CFCE1DDA2E07008CE399 /* MarvelAPI.swift */; };
@@ -45,6 +46,7 @@
 		8FC17EFA21EF959300859E28 /* CharacterTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewDataSource.swift; sourceTree = "<group>"; };
 		8FC17EFD21EF95F000859E28 /* CharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableCell.swift; sourceTree = "<group>"; };
 		8FC17F0021EF993C00859E28 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
+		8FE7CF5521EFAD870067977E /* CharactersTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTable.swift; sourceTree = "<group>"; };
 		9922F1561DFDB69200237BFE /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9922F1591DFDC00900237BFE /* ApperanceProxyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApperanceProxyHelper.swift; sourceTree = "<group>"; };
 		9939CFCE1DDA2E07008CE399 /* MarvelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8FC17F0021EF993C00859E28 /* CharacterRowView.swift */,
+				8FE7CF5521EFAD870067977E /* CharactersTable.swift */,
 				EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */,
 				EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */,
 			);
@@ -403,6 +406,7 @@
 				EF10AF0621EFBEAF005E8BB7 /* CharactersCollectionView.swift in Sources */,
 				8FC17F0121EF993C00859E28 /* CharacterRowView.swift in Sources */,
 				8FC17EF721EF93B700859E28 /* CharacterSelectionDelegate.swift in Sources */,
+				8FE7CF5621EFAD870067977E /* CharactersTable.swift in Sources */,
 				99FC2BCF1DDDB966006CB7EE /* ThumbImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
