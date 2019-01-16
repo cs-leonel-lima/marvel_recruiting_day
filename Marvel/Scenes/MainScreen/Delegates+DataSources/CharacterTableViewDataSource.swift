@@ -10,7 +10,7 @@ import UIKit
 
 final class CharacterTableViewDataSource: NSObject, UITableViewDataSource {
     
-    let items: [Character]
+    var items: [Character]
     
     init(items: [Character], tableView: UITableView) {
         self.items = items
@@ -34,6 +34,11 @@ final class CharacterTableViewDataSource: NSObject, UITableViewDataSource {
         let character = items[indexPath.row]
         cell.setup(item: character)
         return cell
+    }
+    
+    func update(with items: [Character], handler: () -> ()){
+        self.items = items
+        handler()
     }
     
 }

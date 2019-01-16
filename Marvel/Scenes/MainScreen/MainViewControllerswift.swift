@@ -12,9 +12,12 @@ class MainViewController: UIViewController {
     
     let screen = MainViewControllerScreen()
     
+    let characters = [Character(name: "Coisa", bio: "bixo vei de predra", id: 3123, mockImage: #imageLiteral(resourceName: "mockImage")), Character(name: "Thor", bio: "Deus boiolinha", id: 12311, mockImage: #imageLiteral(resourceName: "mockImage"))]
+    
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.screen.charactersTableView.updateItems(characters)
     }
     
     init(){

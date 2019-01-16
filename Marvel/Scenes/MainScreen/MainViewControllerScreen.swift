@@ -9,8 +9,8 @@
 import UIKit
 
 final class MainViewControllerScreen: UIView {
-    let charactersTableView: UITableView = {
-        let table = UITableView()
+    let charactersTableView: CharactersTable = {
+        let table = CharactersTable()
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
