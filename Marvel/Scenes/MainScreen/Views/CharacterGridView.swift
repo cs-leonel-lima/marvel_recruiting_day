@@ -49,7 +49,7 @@ final class CharacterGridView: UIView {
     
     func setup(_ character: Character) {
         // TODO: Use actual API path to download correct image
-        image.image = UIImage(named: "mockImage")
+        image.image = character.image
         name.text = character.name
     }
     
