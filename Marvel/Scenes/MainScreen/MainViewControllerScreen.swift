@@ -73,8 +73,8 @@ extension MainViewControllerScreen: CodeView {
     
     func buildViewHierarchy() {
         self.addSubview(self.searchBar)
-        self.addSubview(self.charactersTableView)
         self.addSubview(self.charactersCollectionView)
+        self.addSubview(self.charactersTableView)
     }
     
     func setupConstraints() {
