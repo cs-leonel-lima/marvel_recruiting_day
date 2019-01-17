@@ -17,7 +17,7 @@ final class CharacterTableViewDataSource: NSObject, ItemsTableViewDatasource {
         self.items = items
         self.tableView = tableView
         self.delegate = delegate
-        super.init() //?
+        super.init()
         self.tableView?.register(CharacterTableCell.self, forCellReuseIdentifier: CharacterTableCell.identifier)
         self.setupTableView()
     }

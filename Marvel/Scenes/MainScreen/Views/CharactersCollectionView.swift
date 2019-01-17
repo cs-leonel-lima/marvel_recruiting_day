@@ -10,13 +10,33 @@ import UIKit
 
 class CharactersCollectionView: UICollectionView {
     
+    var selectionDelegate: ((Character) -> Void)?
+    
+    var customDataSource: CharactersCollectionViewDataSource?
+    lazy var customDelegate: CharacterCollectionViewDelegate = CharacterCollectionViewDelegate(delegate: self)
+    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        self.customDataSource = CharactersCollectionViewDataSource(items: [], collectionView: self, delegate: customDelegate)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func updateItems(characters: [Character]) {
+        self.customDataSource?.updateItems(items: characters)
+    }
+    
+}
+
+extension CharactersCollectionView: CharactersSelectionDelegate {
+    func didSelect(character: IndexPath) {
+        //TODO
+    }
+    
+    
     
     
 }

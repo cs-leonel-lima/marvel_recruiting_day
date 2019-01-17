@@ -34,6 +34,7 @@
 		EF52545721F0261D003B5A1A /* CharactersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52545621F0261D003B5A1A /* CharactersCollectionViewDataSource.swift */; };
 		EF52545921F03270003B5A1A /* CharacterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52545821F03270003B5A1A /* CharacterGridView.swift */; };
 		EF52545B21F03478003B5A1A /* CharactersCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52545A21F03478003B5A1A /* CharactersCollectionViewDelegate.swift */; };
+		EFF19DB121F0ACB300DAA166 /* ItemCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF19DB021F0ACB300DAA166 /* ItemCollectionDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		EF52545621F0261D003B5A1A /* CharactersCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		EF52545821F03270003B5A1A /* CharacterGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGridView.swift; sourceTree = "<group>"; };
 		EF52545A21F03478003B5A1A /* CharactersCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		EFF19DB021F0ACB300DAA166 /* ItemCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8A55834521EFE08000D50326 /* ItemTableViewDataSource.swift */,
+				EFF19DB021F0ACB300DAA166 /* ItemCollectionDataSource.swift */,
 			);
 			path = Generics;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				EF10AEFD21EF89AA005E8BB7 /* DetailViewController.swift in Sources */,
 				EF52545921F03270003B5A1A /* CharacterGridView.swift in Sources */,
 				9922F15A1DFDC00900237BFE /* ApperanceProxyHelper.swift in Sources */,
+				EFF19DB121F0ACB300DAA166 /* ItemCollectionDataSource.swift in Sources */,
 				EF10AF0221EFACF0005E8BB7 /* CharacterCollectionCell.swift in Sources */,
 				EF10AEFF21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift in Sources */,
 				99D0DEBA1DE268D000FE34D7 /* UIImageView+Kingfisher.swift in Sources */,

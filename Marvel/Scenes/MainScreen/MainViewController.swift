@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.screen.charactersTableView.updateItems(characters)
+        self.screen.charactersCollectionView.updateItems(characters: characters)
     }
     
     init(){
@@ -30,12 +31,21 @@ class MainViewController: UIViewController {
     
     override func loadView() {
         self.view = screen
+        self.setupNavigationItems()
     }
     
     override func viewDidLoad() {
         self.title = "Characters"
         self.setupTableView(with: self.characters)
-        self.setupCollectionView()
+        self.setupCollectionView(with: self.characters)
+        
+    }
+    
+    func setupNavigationItems() {
+        //TODO: add selectors
+        let gridButton = UIBarButtonItem(image: #imageLiteral(resourceName: "GridIcon"), style: .plain, target: self, action: nil) // target seria self mesmo?
+        let listbutton = UIBarButtonItem(image: #imageLiteral(resourceName: "ListIcon"), style: .plain, target: self, action: nil)
+        self.navigationItem.setRightBarButtonItems([gridButton, listbutton], animated: true)
     }
 }
 
@@ -44,46 +54,7 @@ extension MainViewController {
         screen.charactersTableView.updateItems(characters)
     }
     
-    func setupCollectionView() {
-        screen.charactersCollectionView.dataSource = self
-        screen.charactersCollectionView.delegate = self
-        screen.charactersCollectionView.register(CharacterCollectionCell.self, forCellWithReuseIdentifier: CharacterCollectionCell.cellIdentifier)
-        screen.charactersCollectionView.reloadData()
+    func setupCollectionView(with characters: [Character]) {
+        screen.charactersCollectionView.updateItems(characters: characters)
     }
-}
-
-
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    // MARK: UICollectionView Delegate and Datasource
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return characters.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCell.cellIdentifier, for: indexPath) as? CharacterCollectionCell else { fatalError("Could not dequeue character collection cell") }
-        
-        let character = characters[indexPath.row]
-        cell.setup(with: character)
-        return cell
-    }
-    
-    // MARK: FlowLayoutDelegate
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfCells = CGFloat(2)
-        let width = collectionView.bounds.size.width / numberOfCells
-        return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    
 }

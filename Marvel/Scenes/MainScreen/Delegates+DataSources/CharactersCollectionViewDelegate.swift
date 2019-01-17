@@ -12,10 +12,8 @@ import UIKit
 final class CharacterCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     weak var delegate: CharactersSelectionDelegate?
-    let items: [Character]
     
-    init(items: [Character], delegate: CharactersSelectionDelegate) {
-        self.items = items
+    init(delegate: CharactersSelectionDelegate) {
         self.delegate = delegate
     }
     
@@ -26,9 +24,15 @@ final class CharacterCollectionViewDelegate: NSObject, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let character = items[indexPath.item]
-        print("tapped:", character)
-      // TODO  delegate?.didSelect(character: character)
+        self.delegate?.didSelect(character: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
 }

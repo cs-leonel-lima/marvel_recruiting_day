@@ -38,6 +38,6 @@ extension CharactersTable {
 
 extension CharactersTable: CharactersSelectionDelegate {
     func didSelect(character at: IndexPath) {
-        
+        // TODO
     }
 }

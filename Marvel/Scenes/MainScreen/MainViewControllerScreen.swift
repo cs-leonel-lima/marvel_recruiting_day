@@ -9,6 +9,25 @@
 import UIKit
 
 final class MainViewControllerScreen: UIView {
+    
+    enum CharactersDisplayMode {
+        case grid
+        case list
+    }
+    
+    var displayMode: CharactersDisplayMode = .list {
+        didSet {
+            switch displayMode {
+            case .grid:
+                charactersCollectionView.isHidden = false
+                charactersTableView.isHidden = true
+            case .list:
+                charactersCollectionView.isHidden = true
+                charactersTableView.isHidden = false
+            }
+        }
+    }
+    
     let charactersTableView: CharactersTable = {
         let table = CharactersTable(frame: .zero, style: .grouped)
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -23,8 +42,8 @@ final class MainViewControllerScreen: UIView {
         return searchBar
     }()
     
-    let charactersCollectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let charactersCollectionView: CharactersCollectionView = {
+        let collectionView = CharactersCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = true
         return collectionView
@@ -69,7 +88,6 @@ extension MainViewControllerScreen: CodeView {
             self.charactersCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.charactersCollectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
             ])
-        
     }
     
     func setupAdditionalConfiguration() {

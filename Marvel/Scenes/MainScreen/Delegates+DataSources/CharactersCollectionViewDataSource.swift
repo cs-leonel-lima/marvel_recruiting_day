@@ -8,38 +8,40 @@
 
 import UIKit
 
-class CharactersCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+class CharactersCollectionViewDataSource: NSObject, ItemCollectionDataSource {
     
-    var characters: [Character]
+    var items: [Character]
+    var delegate: UICollectionViewDelegate?
+    var collectionView: UICollectionView?
     
-    weak var collectionView: UICollectionView?
-    weak var delegate: UICollectionViewDelegate?
-    
-    init(characters: [Character], collectionView: UICollectionView, delegate: UICollectionViewDelegate) {
-        self.characters = characters
+    required init(items: [Character], collectionView: UICollectionView, delegate: UICollectionViewDelegate) {
+        self.items = items
         self.collectionView = collectionView
         self.delegate = delegate
-        
+        super.init()
         self.collectionView?.register(CharacterCollectionCell.self, forCellWithReuseIdentifier: CharacterCollectionCell.cellIdentifier)
-        self.collectionView?.reloadData()
+        self.setupCollectionView()
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return characters.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCell.cellIdentifier, for: indexPath) as? CharacterCollectionCell else { fatalError("Could not dequeue character collection cell") }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCell.cellIdentifier, for: indexPath) as? CharacterCollectionCell else { fatalError("failed to dequeue character collection cell") }
         
-        let character = characters[indexPath.row]
+        let character = items[indexPath.item]
         cell.setup(with: character)
-        
         return cell
+        
     }
     
-    func updateCollectionView(_ characters: [Character]) {
-        self.characters = characters
+    func updateItems(items: [Character]) {
+        self.items = items
         self.collectionView?.reloadData()
     }
     
