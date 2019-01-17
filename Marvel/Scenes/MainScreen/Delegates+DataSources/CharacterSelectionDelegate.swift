@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CharactersSelectionDelegate: class {
-    func didSelect(character at: IndexPath)
+    func didSelect(character: IndexPath) // TODO: passar logo o character
 }

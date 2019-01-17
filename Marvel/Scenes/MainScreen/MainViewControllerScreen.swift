@@ -24,7 +24,7 @@ final class MainViewControllerScreen: UIView {
     }()
     
     let charactersCollectionView: UICollectionView = {
-        let collectionView = UICollectionView()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -63,7 +63,7 @@ extension MainViewControllerScreen: CodeView {
             ])
         
         NSLayoutConstraint.activate([
-            self.charactersCollectionView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.charactersCollectionView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor),
             self.charactersCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.charactersCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.charactersCollectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)

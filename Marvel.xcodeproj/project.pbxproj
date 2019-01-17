@@ -30,8 +30,10 @@
 		EF10AEFD21EF89AA005E8BB7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AEFC21EF89AA005E8BB7 /* DetailViewController.swift */; };
 		EF10AEFF21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AEFE21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift */; };
 		EF10AF0221EFACF0005E8BB7 /* CharacterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AF0121EFACF0005E8BB7 /* CharacterCollectionCell.swift */; };
-		EF10AF0421EFB4A1005E8BB7 /* CharacterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */; };
 		EF10AF0621EFBEAF005E8BB7 /* CharactersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */; };
+		EF52545721F0261D003B5A1A /* CharactersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52545621F0261D003B5A1A /* CharactersCollectionViewDataSource.swift */; };
+		EF52545921F03270003B5A1A /* CharacterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52545821F03270003B5A1A /* CharacterGridView.swift */; };
+		EF52545B21F03478003B5A1A /* CharactersCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52545A21F03478003B5A1A /* CharactersCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +67,10 @@
 		EF10AEFC21EF89AA005E8BB7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EF10AEFE21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
 		EF10AF0121EFACF0005E8BB7 /* CharacterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionCell.swift; sourceTree = "<group>"; };
-		EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGridView.swift; sourceTree = "<group>"; };
 		EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionView.swift; sourceTree = "<group>"; };
+		EF52545621F0261D003B5A1A /* CharactersCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		EF52545821F03270003B5A1A /* CharacterGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterGridView.swift; sourceTree = "<group>"; };
+		EF52545A21F03478003B5A1A /* CharactersCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				8FC17EF621EF93B700859E28 /* CharacterSelectionDelegate.swift */,
+				EF52545621F0261D003B5A1A /* CharactersCollectionViewDataSource.swift */,
+				EF52545A21F03478003B5A1A /* CharactersCollectionViewDelegate.swift */,
 				8FC17EF821EF93F500859E28 /* CharacterTableViewDelegate.swift */,
 				8FC17EFA21EF959300859E28 /* CharacterTableViewDataSource.swift */,
 			);
@@ -143,8 +149,8 @@
 			children = (
 				8FC17F0021EF993C00859E28 /* CharacterRowView.swift */,
 				8FE7CF5521EFAD870067977E /* CharactersTable.swift */,
-				EF10AF0321EFB4A1005E8BB7 /* CharacterGridView.swift */,
 				EF10AF0521EFBEAF005E8BB7 /* CharactersCollectionView.swift */,
+				EF52545821F03270003B5A1A /* CharacterGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF10AEFD21EF89AA005E8BB7 /* DetailViewController.swift in Sources */,
+				EF52545921F03270003B5A1A /* CharacterGridView.swift in Sources */,
 				9922F15A1DFDC00900237BFE /* ApperanceProxyHelper.swift in Sources */,
 				EF10AF0221EFACF0005E8BB7 /* CharacterCollectionCell.swift in Sources */,
 				EF10AEFF21EF8B8F005E8BB7 /* DetailViewControllerScreen.swift in Sources */,
@@ -410,16 +417,17 @@
 				8FC17EFB21EF959300859E28 /* CharacterTableViewDataSource.swift in Sources */,
 				8F59614921EF802700B0B287 /* CodeViewProtocol.swift in Sources */,
 				8FC17EFE21EF95F000859E28 /* CharacterTableCell.swift in Sources */,
+				EF52545721F0261D003B5A1A /* CharactersCollectionViewDataSource.swift in Sources */,
 				9922F1571DFDB69200237BFE /* ColorPalette.swift in Sources */,
 				8F59614B21EF804900B0B287 /* MainViewControllerswift.swift in Sources */,
 				99E1DFE41DDA1F4C006F9D96 /* AppDelegate.swift in Sources */,
 				9939CFCF1DDA2E07008CE399 /* MarvelAPI.swift in Sources */,
-				EF10AF0421EFB4A1005E8BB7 /* CharacterGridView.swift in Sources */,
 				EF10AF0621EFBEAF005E8BB7 /* CharactersCollectionView.swift in Sources */,
 				8FC17F0121EF993C00859E28 /* CharacterRowView.swift in Sources */,
 				8FC17EF721EF93B700859E28 /* CharacterSelectionDelegate.swift in Sources */,
 				8FE7CF5621EFAD870067977E /* CharactersTable.swift in Sources */,
 				99FC2BCF1DDDB966006CB7EE /* ThumbImage.swift in Sources */,
+				EF52545B21F03478003B5A1A /* CharactersCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

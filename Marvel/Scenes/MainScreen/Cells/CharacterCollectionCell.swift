@@ -27,6 +27,12 @@ class CharacterCollectionCell: UICollectionViewCell {
         characterGridView.clean()
     }
     
+    static let cellIdentifier = "gridCell"
+    
+    func setup(with character: Character) {
+        characterGridView.setup(character)
+    }
+    
 }
 
 extension CharacterCollectionCell: CodeView {
@@ -42,19 +48,4 @@ extension CharacterCollectionCell: CodeView {
             self.characterGridView.bottomAnchor.constraint(equalTo: self.bottomAnchor)])
     }
  
-}
-
-extension CharacterCollectionCell {
-    
-    //TODO: call the grid setup
-    
-    func setupGrid(with character: Character) {
-        characterGridView.name.text = character.name
-        characterGridView.image.image = UIImage(named: "mockImage")
-        
-        guard let path = character.thumbImage?.fullPath() else {
-            return
-        }
-        characterGridView.image.download(image: path)
-    }
 }

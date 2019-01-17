@@ -38,6 +38,12 @@ final class CharacterGridView: UIView {
         name.text = ""
     }
     
+    func setup(_ character: Character) {
+        // TODO: Use actual API path to download correct image
+        image.image = UIImage(named: "mockCharacter")
+        name.text = character.name
+    }
+    
 }
 
 extension CharacterGridView: CodeView {
