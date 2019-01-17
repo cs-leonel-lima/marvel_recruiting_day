@@ -43,9 +43,17 @@ class MainViewController: UIViewController {
     
     func setupNavigationItems() {
         //TODO: add selectors
-        let gridButton = UIBarButtonItem(image: #imageLiteral(resourceName: "GridIcon"), style: .plain, target: self, action: nil) // target seria self mesmo?
-        let listbutton = UIBarButtonItem(image: #imageLiteral(resourceName: "ListIcon"), style: .plain, target: self, action: nil)
+        let gridButton = UIBarButtonItem(image: #imageLiteral(resourceName: "GridIcon"), style: .plain, target: self, action: #selector(toggleCollection)) // target seria self mesmo?
+        let listbutton = UIBarButtonItem(image: #imageLiteral(resourceName: "ListIcon"), style: .plain, target: self, action: #selector(toggleTable))
         self.navigationItem.setRightBarButtonItems([gridButton, listbutton], animated: true)
+    }
+    
+    @objc func toggleCollection() {
+        self.screen.displayMode = .grid
+    }
+    
+    @objc func toggleTable() {
+        self.screen.displayMode = .list
     }
 }
 

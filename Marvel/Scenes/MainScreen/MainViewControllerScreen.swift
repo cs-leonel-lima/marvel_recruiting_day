@@ -19,11 +19,9 @@ final class MainViewControllerScreen: UIView {
         didSet {
             switch displayMode {
             case .grid:
-                charactersCollectionView.isHidden = false
-                charactersTableView.isHidden = true
+                showCollectionView()
             case .list:
-                charactersCollectionView.isHidden = true
-                charactersTableView.isHidden = false
+                showTableView()
             }
         }
     }
@@ -56,6 +54,16 @@ final class MainViewControllerScreen: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func showCollectionView() {
+        charactersCollectionView.isHidden = false
+        charactersTableView.isHidden = true
+    }
+    
+    private func showTableView() {
+        charactersCollectionView.isHidden = true
+        charactersTableView.isHidden = false
     }
 }
 
