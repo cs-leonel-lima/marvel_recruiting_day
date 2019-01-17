@@ -21,8 +21,8 @@ final class CharacterRowView: UIView {
     let titleLabel: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        title.textAlignment = .center
+        title.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
+        title.textAlignment = .left
         return title
     }()
     
