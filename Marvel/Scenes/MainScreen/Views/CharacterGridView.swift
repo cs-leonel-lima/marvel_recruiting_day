@@ -11,6 +11,15 @@ import SDWebImage
 
 final class CharacterGridView: UIView {
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     let image: UIImageView = {
         let img = UIImageView(frame: .zero)
         img.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +49,7 @@ final class CharacterGridView: UIView {
     
     func setup(_ character: Character) {
         // TODO: Use actual API path to download correct image
-        image.image = UIImage(named: "mockCharacter")
+        image.image = UIImage(named: "mockImage")
         name.text = character.name
     }
     
@@ -67,7 +76,7 @@ extension CharacterGridView: CodeView {
             self.footer.heightAnchor.constraint(equalToConstant: 30)])
         
         NSLayoutConstraint.activate([
-            self.name.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5),
+            self.name.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -2),
             self.name.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             self.name.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5)])
     }

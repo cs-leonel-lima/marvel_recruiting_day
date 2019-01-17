@@ -10,7 +10,11 @@ import UIKit
 
 class CharacterCollectionCell: UICollectionViewCell {
     
-    let characterGridView = CharacterGridView()
+    let characterGridView: CharacterGridView = {
+        let view = CharacterGridView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     // Implement size cell
     

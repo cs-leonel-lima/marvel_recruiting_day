@@ -11,7 +11,7 @@
 		577769109DC3FB06E7D1882F /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D7213E1EA596B7C60C8E59 /* Pods_Marvel.framework */; };
 		8A55834621EFE08000D50326 /* ItemTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55834521EFE08000D50326 /* ItemTableViewDataSource.swift */; };
 		8F59614921EF802700B0B287 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614821EF802700B0B287 /* CodeViewProtocol.swift */; };
-		8F59614B21EF804900B0B287 /* MainViewControllerswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */; };
+		8F59614B21EF804900B0B287 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614A21EF804900B0B287 /* MainViewController.swift */; };
 		8F59614D21EF8B8A00B0B287 /* MainViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */; };
 		8FC17EF721EF93B700859E28 /* CharacterSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC17EF621EF93B700859E28 /* CharacterSelectionDelegate.swift */; };
 		8FC17EF921EF93F500859E28 /* CharacterTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC17EF821EF93F500859E28 /* CharacterTableViewDelegate.swift */; };
@@ -43,7 +43,7 @@
 		8A55834521EFE08000D50326 /* ItemTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewDataSource.swift; sourceTree = "<group>"; };
 		8C6A61295B862198BB138719 /* Pods_MarvelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F59614821EF802700B0B287 /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
-		8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerswift.swift; sourceTree = "<group>"; };
+		8F59614A21EF804900B0B287 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerScreen.swift; sourceTree = "<group>"; };
 		8FC17EF621EF93B700859E28 /* CharacterSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionDelegate.swift; sourceTree = "<group>"; };
 		8FC17EF821EF93F500859E28 /* CharacterTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				8FC17EFF21EF992D00859E28 /* Views */,
 				8FC17EFC21EF95BC00859E28 /* Cells */,
 				8FC17EF521EF938400859E28 /* Delegates+DataSources */,
-				8F59614A21EF804900B0B287 /* MainViewControllerswift.swift */,
+				8F59614A21EF804900B0B287 /* MainViewController.swift */,
 				8F59614C21EF8B8A00B0B287 /* MainViewControllerScreen.swift */,
 			);
 			path = MainScreen;
@@ -419,7 +419,7 @@
 				8FC17EFE21EF95F000859E28 /* CharacterTableCell.swift in Sources */,
 				EF52545721F0261D003B5A1A /* CharactersCollectionViewDataSource.swift in Sources */,
 				9922F1571DFDB69200237BFE /* ColorPalette.swift in Sources */,
-				8F59614B21EF804900B0B287 /* MainViewControllerswift.swift in Sources */,
+				8F59614B21EF804900B0B287 /* MainViewController.swift in Sources */,
 				99E1DFE41DDA1F4C006F9D96 /* AppDelegate.swift in Sources */,
 				9939CFCF1DDA2E07008CE399 /* MarvelAPI.swift in Sources */,
 				EF10AF0621EFBEAF005E8BB7 /* CharactersCollectionView.swift in Sources */,

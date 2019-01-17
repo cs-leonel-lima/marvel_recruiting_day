@@ -26,6 +26,7 @@ final class MainViewControllerScreen: UIView {
     let charactersCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isScrollEnabled = true
         return collectionView
     }()
     
@@ -74,7 +75,5 @@ extension MainViewControllerScreen: CodeView {
     func setupAdditionalConfiguration() {
         self.searchBar.isTranslucent = false
         self.searchBar.barTintColor = ColorPalette.black
-        
     }
 }
-

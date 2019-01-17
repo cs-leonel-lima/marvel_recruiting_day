@@ -27,6 +27,7 @@ final class CharacterCollectionViewDelegate: NSObject, UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = items[indexPath.item]
+        print("tapped:", character)
       // TODO  delegate?.didSelect(character: character)
     }
     
