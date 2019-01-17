@@ -21,6 +21,8 @@ final class CharacterRowView: UIView {
     let titleLabel: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        title.textAlignment = .center
         return title
     }()
     
@@ -52,11 +54,12 @@ extension CharacterRowView: CodeView {
         NSLayoutConstraint.activate([
                 self.thumbImage.topAnchor.constraint(equalTo: self.topAnchor),
                 self.thumbImage.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                self.thumbImage.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+                self.thumbImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                self.thumbImage.widthAnchor.constraint(equalToConstant: 70)
             ])
         
         NSLayoutConstraint.activate([
-                self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+                self.titleLabel.leadingAnchor.constraint(equalTo: self.thumbImage.trailingAnchor, constant: 10),
                 self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
                 self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
                 self.titleLabel.heightAnchor.constraint(equalToConstant: 20)
@@ -64,7 +67,7 @@ extension CharacterRowView: CodeView {
         
         NSLayoutConstraint.activate([
                 self.overviewlabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
-                self.overviewlabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+                self.overviewlabel.leadingAnchor.constraint(equalTo: self.thumbImage.trailingAnchor, constant: 10),
                 self.overviewlabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
                 self.overviewlabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
             ])
@@ -73,6 +76,7 @@ extension CharacterRowView: CodeView {
     func setupAdditionalConfiguration() {
         titleLabel.textColor = .white
         overviewlabel.textColor = .white
+        backgroundColor = ColorPalette.black
     }
     
     

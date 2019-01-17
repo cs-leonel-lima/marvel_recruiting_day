@@ -33,9 +33,9 @@ final class CharacterTableCell: UITableViewCell{
     
     
     func setup(item: Character) {
-        if let url = item.thumbImage?.fullPath() {
-            characterRowView.thumbImage.download(image: url)
-        }
+        self.characterRowView.overviewlabel.text = item.bio
+        self.characterRowView.titleLabel.text = item.name
+        self.characterRowView.thumbImage.image = item.image
     }
 }
 
