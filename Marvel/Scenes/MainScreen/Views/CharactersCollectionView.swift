@@ -10,7 +10,7 @@ import UIKit
 
 class CharactersCollectionView: UICollectionView {
     
-    var selectionDelegate: ((Character) -> Void)?
+    var didSelectCharacter: ((Character) -> Void)?
     
     var customDataSource: CharactersCollectionViewDataSource?
     lazy var customDelegate: CharacterCollectionViewDelegate = CharacterCollectionViewDelegate(delegate: self)
@@ -32,8 +32,9 @@ class CharactersCollectionView: UICollectionView {
 }
 
 extension CharactersCollectionView: CharactersSelectionDelegate {
-    func didSelect(character: IndexPath) {
-        //TODO
+    func didSelect(indexPath: IndexPath) {
+        guard let selectionHandler = self.didSelectCharacter, let selectedCharacter = self.customDataSource?.items[indexPath.item] else { return }
+        selectionHandler(selectedCharacter)
     }
     
     

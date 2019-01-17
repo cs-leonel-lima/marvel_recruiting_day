@@ -38,11 +38,12 @@ class MainViewController: UIViewController {
         self.title = "Characters"
         self.setupTableView(with: self.characters)
         self.setupCollectionView(with: self.characters)
+        self.screen.charactersTableView.didSelectCharacter = self.navigateToCharacterScreen
+        self.screen.charactersCollectionView.didSelectCharacter = self.navigateToCharacterScreen
         
     }
     
     func setupNavigationItems() {
-        //TODO: add selectors
         let gridButton = UIBarButtonItem(image: #imageLiteral(resourceName: "GridIcon"), style: .plain, target: self, action: #selector(toggleCollection)) // target seria self mesmo?
         let listbutton = UIBarButtonItem(image: #imageLiteral(resourceName: "ListIcon"), style: .plain, target: self, action: #selector(toggleTable))
         self.navigationItem.setRightBarButtonItems([gridButton, listbutton], animated: true)
@@ -55,6 +56,15 @@ class MainViewController: UIViewController {
     @objc func toggleTable() {
         self.screen.displayMode = .list
     }
+}
+
+extension MainViewController {
+    
+    func navigateToCharacterScreen(with character: Character) {
+        guard let navigationController = self.navigationController else { return }
+        navigationController.pushViewController(DetailViewController(character: character), animated: true)
+    }
+    
 }
 
 extension MainViewController {

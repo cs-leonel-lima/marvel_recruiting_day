@@ -21,6 +21,6 @@ final class CharacterTableViewDelegate: NSObject, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate.didSelect(character: indexPath)
+        delegate.didSelect(indexPath: indexPath)
     }
 }

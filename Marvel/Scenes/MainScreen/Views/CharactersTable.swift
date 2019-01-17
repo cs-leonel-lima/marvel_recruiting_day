@@ -37,7 +37,9 @@ extension CharactersTable {
 }
 
 extension CharactersTable: CharactersSelectionDelegate {
-    func didSelect(character at: IndexPath) {
-        // TODO
+    func didSelect(indexPath: IndexPath) {
+        
+        guard let selectionHandler = self.didSelectCharacter, let selectedCharacter = self.customDataSource?.items[indexPath.item] else { return }
+        selectionHandler(selectedCharacter)
     }
 }
