@@ -28,6 +28,7 @@ final class MainViewControllerScreen: UIView {
     
     let charactersTableView: CharactersTable = {
         let table = CharactersTable(frame: .zero, style: .grouped)
+        table.backgroundColor = ColorPalette.black
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -101,5 +102,6 @@ extension MainViewControllerScreen: CodeView {
     func setupAdditionalConfiguration() {
         self.searchBar.isTranslucent = false
         self.searchBar.barTintColor = ColorPalette.black
+        self.charactersCollectionView.backgroundColor = ColorPalette.black
     }
 }

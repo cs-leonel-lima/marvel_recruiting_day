@@ -13,6 +13,8 @@ final class DetailViewControllerScreen: UIView {
     
     let characterImageView: UIImageView = {
         let view = UIImageView(frame: .zero)
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
         
@@ -49,13 +51,13 @@ extension DetailViewControllerScreen: CodeView {
             self.characterImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.characterImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.characterImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            self.characterImageView.heightAnchor.constraint(equalToConstant: 350)
+            self.characterImageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7)
             ])
         
         NSLayoutConstraint.activate([
             self.descriptionText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.descriptionText.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.descriptionText.topAnchor.constraint(equalTo: self.characterImageView.bottomAnchor, constant: 40)
+            self.descriptionText.topAnchor.constraint(equalTo: self.characterImageView.bottomAnchor, constant: 60)
             ])
         
     }

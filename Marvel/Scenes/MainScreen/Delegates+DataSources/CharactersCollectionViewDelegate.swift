@@ -24,6 +24,7 @@ final class CharacterCollectionViewDelegate: NSObject, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
         self.delegate?.didSelect(indexPath: indexPath)
     }
     

@@ -23,6 +23,8 @@ final class CharacterGridView: UIView {
     let image: UIImageView = {
         let img = UIImageView(frame: .zero)
         img.translatesAutoresizingMaskIntoConstraints = false
+        img.contentMode = .scaleAspectFill
+        img.clipsToBounds = true
         return img
     }()
     

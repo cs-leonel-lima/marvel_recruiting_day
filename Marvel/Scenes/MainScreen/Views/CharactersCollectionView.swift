@@ -36,8 +36,5 @@ extension CharactersCollectionView: CharactersSelectionDelegate {
         guard let selectionHandler = self.didSelectCharacter, let selectedCharacter = self.customDataSource?.items[indexPath.item] else { return }
         selectionHandler(selectedCharacter)
     }
-    
-    
-    
-    
+
 }
